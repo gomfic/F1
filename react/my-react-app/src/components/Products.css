@@ -8,21 +8,25 @@
 }
 
 .products h2 {
-  font-size: 24px;
+  font-size: 26px;
   margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .box {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
   gap: 20px;
 }
 
 .card {
-  background-color: rgba(21, 21, 30, 0.85);
+  background-color: #15151e;
   border-radius: 14px;
-  padding: 15px;
+  overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
   transition: 0.2s;
 }
 
@@ -31,23 +35,43 @@
   box-shadow: 0 10px 25px rgba(225, 6, 0, 0.3);
 }
 
+.img-wrap {
+  width: 100%;
+  height: 180px;
+  overflow: hidden;
+}
+
 .img {
   width: 100%;
-  height: 160px;
+  height: 100%;
   object-fit: cover;
-  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.card:hover .img {
+  transform: scale(1.05);
+}
+
+.card-content {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  text-align: left;
 }
 
 .name {
   font-size: 16px;
-  margin: 12px 0 6px;
+  margin: 0 0 10px;
+  color: #f3f4f6;
 }
 
 .price {
   font-size: 18px;
   font-weight: bold;
-  color: #e10600;
-  margin: 0 0 12px;
+  color: #ffffff;
+  margin: 0 0 15px;
+  margin-top: auto;
 }
 
 .btn {
@@ -55,7 +79,7 @@
   background-color: #e10600;
   color: #ffffff;
   border: none;
-  padding: 8px;
+  padding: 10px;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
@@ -63,5 +87,19 @@
 }
 
 .btn:hover {
-  background-color: #b50500;
+  background-color: #ff1e17;
+}
+
+.simple-cart {
+  margin-top: 30px;
+  background: #15151e;
+  padding: 15px 25px;
+  border-radius: 12px;
+  display: inline-flex;
+  gap: 30px;
+  font-size: 16px;
+}
+
+.simple-cart strong {
+  color: #e10600;
 }

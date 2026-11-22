@@ -7,7 +7,7 @@ function Heder() {
             <header>
                 <img className="logo" src="https://www.redbull.com/v3/resources/images/client/header/redbullcom-logo_double-with-text.svg" />
                 <nav>
-                    <a href="">Главная</a>
+                    <a href="/">Главная</a>
                     <Link to="/products">Продукция</Link>
                     <a href="#">Команды</a>
                     <a href="#">Контакты</a>
